@@ -5,7 +5,7 @@
 Here are my NixOS config files.  
 Applying KISS principle.
 
-**Note**: I am currently testing the Cosmic DE Alpha 4.
+**Note**: Currently on Cosmic DE Alpha 4.
 
 **Highlights**:
 
