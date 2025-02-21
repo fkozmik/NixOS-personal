@@ -3,7 +3,8 @@
   imports =
     [ ## Includes : 
       ./base.nix
-      ./hardware-configuration.nix
+      ./battery-management.nix
       ./cosmic.nix
+      ./hardware-configuration.nix
     ];
 }
