@@ -31,7 +31,7 @@ Applying KISS principle.
 
 Most relevant user apps daily drivers:
 
-- Cosmic Alpha 4
+- Cosmic Alpha 5
 - vim and VScodium (with proprietary extensions)
 - zsh
 - Basic `Console` emulator from Cosmic - It's good enough for me
@@ -39,5 +39,5 @@ Most relevant user apps daily drivers:
 - fastfetch
 - tailscale
 - docker
-- thefuck, you know what I mean...
+- thefuck, you know what it does.
 - and NixOS (Special thanks to you !)
