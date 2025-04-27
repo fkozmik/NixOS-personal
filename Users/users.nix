@@ -23,10 +23,12 @@
     packages = with pkgs; [
       brave
       bitwarden
+      discord
       docker
       fastfetch
       ffmpeg
-      git 
+      git
+      google-chrome
       libreoffice
       nmon
       oh-my-zsh
