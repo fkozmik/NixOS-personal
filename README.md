@@ -5,7 +5,7 @@
 Here are my NixOS config files.  
 Applying KISS principle.
 
-**Note**: Currently on Cosmic DE Alpha 4.
+**Note**: Currently on Cosmic DE Alpha 7.
 
 **Highlights**:
 
@@ -21,6 +21,7 @@ Applying KISS principle.
 - `flake.lock`: //
 - `Base`: Folder containing a tad more advanced configurations depending on what I like ATM *¯\\_(ツ)_/¯*.
   - `base.nix`: Mostly Nix Options with programs and services.
+  - `battery-management.nix` Battery conf, destined to become a module
   - `cosmic.nix`: GUI confs
 - `Users`: Folder containing personal configurations.
   - `aliases.nix`: The name should tell you exactly what it does ^^
@@ -31,7 +32,7 @@ Applying KISS principle.
 
 Most relevant user apps daily drivers:
 
-- Cosmic Alpha 5
+- Cosmic Alpha 7
 - vim and VScodium (with proprietary extensions)
 - zsh
 - Basic `Console` emulator from Cosmic - It's good enough for me
