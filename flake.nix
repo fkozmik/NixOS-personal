@@ -1,20 +1,12 @@
 {
   inputs = {
-    nixpkgs.follows = "nixos-cosmic/nixpkgs-stable";
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
 
-  outputs = { self, nixpkgs, nixos-cosmic }: {
+  outputs = { self, nixpkgs }: {
     nixosConfigurations = {
       Tartiflette = nixpkgs.lib.nixosSystem {
         modules = [
-          {
-            nix.settings = {
-              substituters = [ "https://cosmic.cachix.org/" ];
-              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-            };
-          }
-          nixos-cosmic.nixosModules.default
           ./configuration.nix
         ];
       };

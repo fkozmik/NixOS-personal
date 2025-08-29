@@ -13,8 +13,8 @@
         {
           name = "Ansible";
           publisher = "redhat";
-          version = "25.1.0";
-          sha256 = "/kLg+msRu6GvkENVu3jw9uDbfEo/x0eZgsKfXvLaO3I=";
+          version = "25.4.0";
+          sha256 = "E/BogNtax4dkv6hlYcaRinTxr4jnVyV9hVCdkIkul9s=";
         }
         {
           name = "theme-dracula";
@@ -27,7 +27,13 @@
           publisher = "mhutchie";
           version = "1.30.0";
           sha256 = "sHeaMMr5hmQ0kAFZxxMiRk6f0mfjkg2XMnA4Gf+DHwA=";
-        } 
+        }
+        {
+          name = "jinja";
+          publisher = "wholroyd";
+          version = "0.0.8";
+          sha256 = "kU2uMIBChHOE76npA9u1CSJCMPHK0hj/2vasVTx9ydI=";
+        }
         {
           name = "mac-vim-ron";
           publisher = "Dashiell";

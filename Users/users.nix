@@ -21,12 +21,13 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
-      brave
       bitwarden
       discord
       docker
       fastfetch
+      firefox
       ffmpeg
+      fprintd
       git
       google-chrome
       libreoffice
