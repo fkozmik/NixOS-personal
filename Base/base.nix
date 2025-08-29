@@ -74,6 +74,7 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    pulseaudio.enable = false;
     printing.enable = true;
     tailscale = {
       enable = true;
