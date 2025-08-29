@@ -22,13 +22,13 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       bitwarden
-      discord
       docker
       fastfetch
       firefox
       ffmpeg
       fprintd
       git
+      gnome-disk-utility
       google-chrome
       libreoffice
       nmon
