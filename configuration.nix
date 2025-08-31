@@ -13,8 +13,6 @@
     };
   };
 
-  console.keyMap = "fr";
-
   fonts = {
     packages = with pkgs; [
       nerd-fonts.fira-code
@@ -41,11 +39,6 @@
       LC_TELEPHONE = "fr_FR.UTF-8";
       LC_TIME = "fr_FR.UTF-8";
     };
-  };
-
-  networking = {
-    hostName = "Tartiflette"; 
-    networkmanager.enable = true;
   };
 
   time.timeZone = "Europe/Paris";

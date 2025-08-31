@@ -15,6 +15,7 @@
   nixpkgs.config = {
     allowUnfreePredicate = (pkg: true);
     permittedInsecurePackages = [
+      "broadcom-sta-6.30.223.271-57-6.12.44"
       "electron-27.3.11"
     ];
   };
@@ -74,19 +75,11 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-    pulseaudio.enable = false;
     printing.enable = true;
+    pulseaudio.enable = false;
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";
-    };
-    xserver = {
-      enable = true;
-      displayManager.gdm.enable = true;
-      xkb = {
-        layout = "fr";
-        variant = "azerty";
-      };
     };
   };
 

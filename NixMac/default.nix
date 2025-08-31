@@ -2,8 +2,7 @@
 {
   imports =
     [ ## Includes : 
-      ./base.nix
-      ./battery-management.nix
-      ./cosmic.nix
+      ./NixMac.nix
+      ./NixMac-hardware-configuration.nix
     ];
 }
