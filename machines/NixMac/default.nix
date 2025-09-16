@@ -1,12 +1,13 @@
-{ config, pkgs, lib, modulesPath,... }:
+{ config, pkgs, lib, ... }:
 {
   imports =
     [ ## Includes : 
-      ../configuration.nix
+      ../../configuration.nix
+      ./NixMac-hardware-configuration.nix
     ];
 
   networking = {
-    hostName = "Tartiflette"; 
+    hostName = "NixMac"; 
     networkmanager.enable = true;
   };
 
@@ -15,7 +16,7 @@
     displayManager.gdm.enable = true;
     xkb = {
       layout = "fr";
-      variant = "azerty";
+      variant = "mac";
     };
   };
 }

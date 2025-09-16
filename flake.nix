@@ -7,12 +7,12 @@
     nixosConfigurations = {
       Tartiflette = nixpkgs.lib.nixosSystem {
         modules = [
-          ./Tartiflette
+          ./machines/Tartiflette
         ];
       };
       NixMac = nixpkgs.lib.nixosSystem {
         modules = [
-          ./NixMac
+          ./machines/NixMac
         ];
       };
     };
