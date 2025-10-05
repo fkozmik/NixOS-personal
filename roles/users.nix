@@ -18,7 +18,7 @@
   users.users.fkozmik = {
     isNormalUser = true;
     description = "fkozmik";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "audio"];
     shell = pkgs.zsh;
     packages = with pkgs; [
       bitwarden
