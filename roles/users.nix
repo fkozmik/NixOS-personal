@@ -22,6 +22,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       bitwarden
+      discord
       docker
       fastfetch
       firefox
