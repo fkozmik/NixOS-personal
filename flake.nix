@@ -10,6 +10,11 @@
           ./machines/Tartiflette
         ];
       };
+      Raclette = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./machines/Raclette
+        ];
+      };
       NixMac = nixpkgs.lib.nixosSystem {
         modules = [
           ./machines/NixMac

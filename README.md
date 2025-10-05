@@ -17,28 +17,29 @@ Applying KISS principle.
 ## Structure
 
 ```
-./NixOS-personal/
-├── Base
-│   ├── base.nix
-│   ├── battery-management.nix
-│   ├── cosmic.nix
-│   └── default.nix
+NixOS-personal/
 ├── configuration.nix
 ├── flake.lock
 ├── flake.nix
-├── NixMac
-│   ├── default.nix
-│   ├── NixMac-hardware-configuration.nix
-│   └── NixMac.nix
+├── machines
+│   ├── NixMac
+│   │   ├── default.nix
+│   │   └── NixMac-hardware-configuration.nix
+│   ├── Raclette
+│   │   ├── default.nix
+│   │   └── Raclette-hardware-configuration.nix
+│   └── Tartiflette
+│       ├── default.nix
+│       └── Tartiflette-hardware-configuration.nix
 ├── README.md
-├── Tartiflette
-│   ├── default.nix
-│   ├── Tartiflette-hardware-configuration.nix
-│   └── Tartiflette.nix
-└── Users
+└── roles
     ├── aliases.nix
-    ├── default.nix
+    ├── battery-management.nix
+    ├── cosmic.nix
     ├── editors.nix
+    ├── fonts.nix
+    ├── programs.nix
+    ├── services.nix
     └── users.nix
 ```
 
