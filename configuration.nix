@@ -9,13 +9,6 @@ in {
   imports =
     []++ rolesImport;
 
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-  };
-
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
     extraLocaleSettings = {
