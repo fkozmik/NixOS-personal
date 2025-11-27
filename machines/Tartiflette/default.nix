@@ -6,12 +6,16 @@
       ./Tartiflette-hardware-configuration.nix
     ];
 
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
+boot.loader = {
+  systemd-boot.enable = false;
+  grub = {
+    enable = true;
+    device = "nodev";
+    efiSupport = true;
+    useOSProber = true;
   };
+  efi.canTouchEfiVariables = true;
+};
 
   networking = {
     hostName = "Tartiflette"; 
