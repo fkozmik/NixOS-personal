@@ -11,16 +11,16 @@
     networkmanager.enable = true;
   };
 
-boot.loader = {
-  systemd-boot.enable = false;
-  grub = {
-    enable = true;
-    device = "nodev";
-    efiSupport = true;
-    useOSProber = true;
+  boot.loader = {
+    systemd-boot.enable = false;
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+    };
+    efi.canTouchEfiVariables = true;
   };
-  efi.canTouchEfiVariables = true;
-};
 
   services.xserver = {
     enable = true;
