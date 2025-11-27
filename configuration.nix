@@ -37,6 +37,7 @@ in {
   };
 
   nixpkgs.config = {
+    allowUnfree = true;
     allowUnfreePredicate = (pkg: true);
     permittedInsecurePackages = [
       "broadcom-sta-6.30.223.271-57-6.12.44"
