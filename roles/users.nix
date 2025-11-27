@@ -21,13 +21,13 @@
     extraGroups = [ "networkmanager" "wheel" "docker" "audio"];
     shell = pkgs.zsh;
     packages = with pkgs; [
+      baobab
       bitwarden
       discord
       docker
       fastfetch
       firefox
       ffmpeg
-      fprintd
       git
       gnome-disk-utility
       google-chrome
@@ -39,6 +39,7 @@
       php
       pika-backup
       powerline-fonts
+      solaar
       spotify
       tailscale
       tree
