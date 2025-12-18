@@ -38,7 +38,6 @@
       powerline-fonts
       spotify
       tailscale
-      thefuck
       tree
       tmux
       xournalpp
