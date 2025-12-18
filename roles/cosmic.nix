@@ -5,7 +5,6 @@
         cosmic-term
         cosmic-edit
         cosmic-comp
-        cosmic-store
         cosmic-randr
         cosmic-panel
         cosmic-icons
@@ -25,6 +24,9 @@
         xdg-desktop-portal-cosmic
         rPackages.cosmicsig
         rPackages.COSMIC_67
+        cosmic-ext-tweaks
+        cosmic-ext-applet-minimon
+        cosmic-ext-applet-privacy-indicator
     ];
 
  services.desktopManager.cosmic.enable = true;

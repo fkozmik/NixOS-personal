@@ -17,12 +17,6 @@
           sha256 = "E/BogNtax4dkv6hlYcaRinTxr4jnVyV9hVCdkIkul9s=";
         }
         {
-          name = "codeium";
-          publisher = "codeium";
-          version = "1.48.2";
-          sha256 = "Nj7r596RWuUNkjn06q5yEaMAqphPXWx+8oIw/GtXwFc=";
-        }
-        {
           name = "theme-dracula";
           publisher = "dracula-theme";
           version = "2.25.1";

@@ -27,7 +27,7 @@
       syntaxHighlighting.enable = true;
       ohMyZsh = {
         enable = true;
-        theme = "agnoster";
+        theme = "jonathan";
         plugins = [
           "sudo"
           "systemadmin"
