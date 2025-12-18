@@ -15,7 +15,6 @@
       enable = true;
       prompt.enable = true;
     };
-    thefuck.enable = true;
     vim = {
       defaultEditor = true;
       enable = true;
