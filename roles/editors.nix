@@ -23,6 +23,12 @@
           sha256 = "ijGbdiqbDQmZYVqZCx2X4W7KRNV3UDddWvz+9x/vfcA=";
         }
         {
+          name = "geminicodeassist";
+          publisher = "Google";
+          version = "2.59.0";
+          sha256 = "MF6w8DSOzWXFSk1GWouTWj+8/BwwyhkTzrNXI0eSNKQ=";
+        }
+        {
           name = "git-graph";
           publisher = "mhutchie";
           version = "1.30.0";

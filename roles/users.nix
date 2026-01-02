@@ -32,13 +32,15 @@
       gnome-disk-utility
       google-chrome
       libreoffice
+      logseq
+      monitor
       nmon
       oh-my-zsh
       php
+      pika-backup
       powerline-fonts
       spotify
       tailscale
-      thefuck
       tree
       tmux
       xournalpp
