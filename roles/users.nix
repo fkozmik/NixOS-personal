@@ -22,7 +22,7 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       baobab
-      bitwarden
+      bitwarden-desktop
       discord
       docker
       fastfetch

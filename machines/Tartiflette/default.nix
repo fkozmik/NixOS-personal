@@ -27,12 +27,14 @@
     networkmanager.enable = true;
   };
 
-  services.xserver = {
-    enable = true;
+  services = {
     displayManager.gdm.enable = true;
-    xkb = {
-      layout = "fr";
-      variant = "azerty";
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "fr";
+        variant = "azerty";
+        };
     };
   };
 }
