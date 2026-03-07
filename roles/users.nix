@@ -32,6 +32,7 @@
       git
       gnome-disk-utility
       google-chrome
+      jetbrains.goland
       libreoffice
       logseq
       monitor
