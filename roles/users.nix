@@ -28,6 +28,7 @@
       fastfetch
       firefox
       ffmpeg
+      gh
       git
       gnome-disk-utility
       google-chrome
