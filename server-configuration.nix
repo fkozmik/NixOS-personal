@@ -1,13 +1,10 @@
 { config, pkgs, lib, ... }:
-let
-  folder = ./roles;
-  nixFiles = lib.filterAttrs 
-    (name: type: type == "regular" && lib.hasSuffix ".nix" name) 
-    (builtins.readDir folder);
-  rolesImport = lib.mapAttrsToList (name: _: folder + ("/" + name)) nixFiles;
-in {
-  imports =
-    []++ rolesImport;
+{
+  imports = [
+    ./roles/aliases.nix
+    ./roles/cosmic.nix ## Temporary UI access
+    ./roles/programs.nix
+  ];
 
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
@@ -41,10 +38,30 @@ in {
     allowUnfree = true;
     allowUnfreePredicate = (pkg: true);
     permittedInsecurePackages = [
-      "broadcom-sta-6.30.223.271-57-6.12.75"
-      "electron-27.3.11"
+      "broadcom-sta-6.30.223.271-59-6.12.75"
     ];
   };
+
+  security = {
+    rtkit.enable = true;
+    sudo.extraRules = [
+      { groups = [ "sudo" ]; commands = [ "ALL" ]; }
+      { users = [ "fkozmik" ];
+        commands = [
+        {
+          command = "/etc/profiles/per-user/fkozmik/bin/docker";
+          options = [ "SETENV" "NOPASSWD" ];
+        }
+        ];
+      }
+    ];
+  };
+
+  networking.extraHosts =
+    ''
+      172.18.0.6 tuleap-web.tuleap-aio-dev.docker
+      172.18.0.7 gitlab.local
+    '';
 
   virtualisation = {
     docker = {
@@ -52,6 +69,38 @@ in {
       storageDriver = "overlay2";
     };
     libvirtd.enable = true;
+  };
+
+  services = {
+    openssh = {
+      enable = true;
+      settings.PasswordAuthentication = false;
+      #settings.PermitRootLogin = "yes";
+    };
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "client";
+    };
+  };
+
+  users.users.fkozmik = {
+    isNormalUser = true;
+    description = "fkozmik";
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    shell = pkgs.zsh;
+    packages = with pkgs; [
+      docker
+      fastfetch
+      gh
+      git
+      gparted
+      nmon
+      oh-my-zsh
+      powerline-fonts
+      tailscale
+      tmux
+      vim
+    ];
   };
 
   time.timeZone = "Europe/Paris";

@@ -2,7 +2,7 @@
 {
   imports =
     [ ## Includes : 
-      ../../configuration.nix
+      ../../server-configuration.nix
       ./NixMac-hardware-configuration.nix
     ];
 
@@ -19,7 +19,6 @@
   };
 
   services = {
-    displayManager.gdm.enable = true;
     xserver = {
       enable = true;
       xkb = {
