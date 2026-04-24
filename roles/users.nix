@@ -23,6 +23,7 @@
     packages = with pkgs; [
       baobab
       bitwarden-desktop
+      brave
       discord
       docker
       fastfetch
@@ -32,7 +33,7 @@
       git
       gnome-disk-utility
       google-chrome
-      jetbrains.goland
+      jetbrains.phpstorm
       libreoffice
       logseq
       monitor
