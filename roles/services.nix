@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 {
+  security.rtkit.enable = true;
+
   services = {
     fprintd.enable = true;
+    hardware.bolt.enable = true;
     openssh = {
       enable = true;
       settings.PasswordAuthentication = false;
@@ -9,8 +12,8 @@
     };
     pipewire = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
+      alsa.enable = false;
+      alsa.support32Bit = false;
       pulse.enable = true;
     };
     printing.enable = true;
