@@ -23,7 +23,7 @@
     packages = with pkgs; [
       baobab
       bitwarden-desktop
-      brave
+      claude-code
       discord
       docker
       fastfetch
