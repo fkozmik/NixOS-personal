@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, ... }:
 {
   security = {
     rtkit.enable = true;
@@ -33,7 +33,6 @@
       git
       gnome-disk-utility
       google-chrome
-      jetbrains.phpstorm
       libreoffice
       logseq
       monitor
@@ -48,6 +47,8 @@
       tree
       tmux
       xournalpp
+
+      pkgs-unstable.jetbrains.phpstorm
     ]; 
   };
 }
