@@ -46,6 +46,7 @@
       tailscale
       tree
       tmux
+      vim
       xournalpp
 
       pkgs-unstable.jetbrains.phpstorm

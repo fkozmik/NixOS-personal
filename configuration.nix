@@ -9,6 +9,13 @@ in {
   imports =
     []++ rolesImport;
 
+  environment.interactiveShellInit = ''
+    alias gs='git status'
+    alias gd='git diff'
+    alias gl='git log --oneline'
+    alias gogit="cd ~/Documents/git/ && ls"
+  '';
+
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
     extraLocaleSettings = {
