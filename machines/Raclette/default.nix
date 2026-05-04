@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 {
   imports =
-    [ ## Includes : 
+    [ ## Includes :
       ../../configuration.nix
       ./Raclette-hardware-configuration.nix
+      ../../roles/dev.nix
     ];
 
   networking = {
