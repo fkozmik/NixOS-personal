@@ -18,15 +18,19 @@
         };
     in {
       nixosConfigurations = {
-        Tartiflette = mkSystem {
+        Fondue = mkSystem {
           system = "x86_64-linux";
-          modules = [ ./machines/Tartiflette ];
+          modules = [ ./machines/Fondue ];
         };
         Raclette = mkSystem {
           system = "x86_64-linux";
           modules = [ ./machines/Raclette ];
         };
-        NixMac = mkSystem {
+        Tartiflette = mkSystem {
+          system = "x86_64-linux";
+          modules = [ ./machines/Tartiflette ];
+        };
+        NixMac = mkSystem { ## Non cheese related so down you go...
           system = "x86_64-linux";
           modules = [ ./machines/NixMac ];
         };
