@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 {
   imports =
-    [ ## Includes : 
+    [ ## Includes :
       ../../configuration.nix
       ./Fondue-hardware-configuration.nix
+      ../../roles/chill.nix
     ];
 
   boot.loader = {

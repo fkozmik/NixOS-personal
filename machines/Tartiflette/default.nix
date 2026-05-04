@@ -1,9 +1,11 @@
 { config, pkgs, ... }:
 {
   imports =
-    [ ## Includes : 
+    [ ## Includes :
       ../../configuration.nix
       ./Tartiflette-hardware-configuration.nix
+      ../../roles/dev.nix
+      ../../modules/battery-management.nix
     ];
 
   boot.loader = {

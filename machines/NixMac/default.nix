@@ -1,9 +1,11 @@
 { config, pkgs, lib, ... }:
 {
   imports =
-    [ ## Includes : 
+    [ ## Includes :
       ../../configuration.nix
       ./NixMac-hardware-configuration.nix
+      ../../roles/chill.nix
+      ../../modules/battery-management.nix
     ];
 
   boot = {

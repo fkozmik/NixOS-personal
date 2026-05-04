@@ -1,13 +1,6 @@
 { config, pkgs, lib, ... }:
-let
-  folder = ./roles;
-  nixFiles = lib.filterAttrs 
-    (name: type: type == "regular" && lib.hasSuffix ".nix" name) 
-    (builtins.readDir folder);
-  rolesImport = lib.mapAttrsToList (name: _: folder + ("/" + name)) nixFiles;
-in {
-  imports =
-    []++ rolesImport;
+{
+  imports = [ ./modules/cosmic.nix ];
 
   environment.interactiveShellInit = ''
     alias gs='git status'

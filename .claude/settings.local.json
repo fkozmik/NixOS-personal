@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /home/fkozmik/personal-nixos/roles/modules)",
+      "Bash(mv /home/fkozmik/personal-nixos/roles/users.nix /home/fkozmik/personal-nixos/roles/modules/)",
+      "Bash(mv /home/fkozmik/personal-nixos/roles/cosmic.nix /home/fkozmik/personal-nixos/roles/modules/)",
+      "Bash(mv /home/fkozmik/personal-nixos/roles/fonts.nix /home/fkozmik/personal-nixos/roles/modules/)",
+      "Bash(mv /home/fkozmik/personal-nixos/roles/solaar.nix /home/fkozmik/personal-nixos/roles/modules/)"
+    ]
+  }
+}
