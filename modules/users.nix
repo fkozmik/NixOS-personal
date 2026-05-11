@@ -44,6 +44,8 @@
       oh-my-zsh
       php
       powerline-fonts
+      realvnc-vnc-viewer
+      remmina
       solaar
       spotify
       tailscale
