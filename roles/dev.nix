@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ../modules/cosmic.nix
     ../modules/fonts.nix
     ../modules/programs.nix
     ../modules/services.nix
