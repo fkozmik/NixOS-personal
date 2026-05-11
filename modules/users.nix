@@ -20,6 +20,10 @@
     description = "fkozmik";
     extraGroups = [ "networkmanager" "wheel" "docker" "audio"];
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF8yR8z38q2a4jsmc3MOw5aOj8sI8e1Mz6lrBBRhbLc6 fkozmik@Raclette"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBCPCGl8/n1cMH1J8oG4Rrtm3JKGPN+wRvSdt8Ga4V5q Tartiflette"
+    ];
     packages = with pkgs; [
       baobab
       bitwarden-desktop
@@ -39,7 +43,6 @@
       nmon
       oh-my-zsh
       php
-      pika-backup
       powerline-fonts
       solaar
       spotify
