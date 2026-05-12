@@ -6,12 +6,11 @@
         gnome-tweaks
         gnomeExtensions.dash-to-dock
         gnomeExtensions.arcmenu
+        wayvnc
     ];
     services = {
         desktopManager.gnome.enable = true;
         displayManager.autoLogin.enable = false;
-        xrdp.enable = true;
-        xrdp.defaultWindowManager = "${pkgs.gnome-session}/bin/gnome-session";
     };
-    networking.firewall.allowedTCPPorts = [ 3389 ];
+    networking.firewall.allowedTCPPorts = [ 5900 ];
 }

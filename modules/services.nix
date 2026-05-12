@@ -18,6 +18,12 @@
     };
     printing.enable = true;
     pulseaudio.enable = false;
+    sunshine = {
+      enable = true;
+      autoStart = true;
+      capSysAdmin = true;
+      openFirewall = true;
+    };
     tailscale = {
       enable = true;
       useRoutingFeatures = "client";

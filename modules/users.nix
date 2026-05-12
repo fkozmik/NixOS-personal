@@ -40,6 +40,7 @@
       libreoffice
       logseq
       monitor
+      moonlight-qt
       nmon
       oh-my-zsh
       php
