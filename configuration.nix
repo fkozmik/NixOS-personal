@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  imports = [ ./modules/cosmic.nix ];
+  imports = [ ];
 
   environment.interactiveShellInit = ''
     alias gs='git status'
