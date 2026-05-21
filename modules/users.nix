@@ -47,6 +47,7 @@
       powerline-fonts
       realvnc-vnc-viewer
       remmina
+      rnote
       solaar
       spotify
       tailscale
