@@ -6,15 +6,19 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable }:
     let
+      unstableOverlay = final: prev: {
+        jetbrains = prev.jetbrains // {
+          phpstorm = (import nixpkgs-unstable {
+            system = final.system;
+            config.allowUnfree = true;
+          }).jetbrains.phpstorm;
+        };
+      };
+
       mkSystem = { system, modules }:
         nixpkgs.lib.nixosSystem {
           inherit system modules;
-          specialArgs = {
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-          };
+          specialArgs = { inherit unstableOverlay; };
         };
     in {
       nixosConfigurations = {

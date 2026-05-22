@@ -1,6 +1,8 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, unstableOverlay, ... }:
 {
   imports = [ ];
+
+  nixpkgs.overlays = [ unstableOverlay ];
 
   environment.interactiveShellInit = ''
     alias gs='git status'
