@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, ... }:
+{ config, pkgs, ... }:
 {
   security = {
     rtkit.enable = true;
@@ -56,7 +56,7 @@
       vim
       xournalpp
 
-      pkgs-unstable.jetbrains.phpstorm
+      jetbrains.phpstorm
     ]; 
   };
 }
