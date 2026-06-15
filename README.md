@@ -2,50 +2,47 @@
 
 # My NixOS personal configuration
 
-Here are my NixOS config files.
-Applying KISS principle.
+NixOS config files. KISS principle.
 
 **Highlights**:
 
 - Multiple machines, **two roles**: `dev` (Cosmic DE) and `chill` (Gnome)
-- Single **ext4** (or **btrfs**) partition
-- Fully **declarative** **self-hosted** stuff
-
+- Single flake entry point with an **unstable overlay** for select packages (PhpStorm)
+- Fully **declarative** configuration — locale, GC, SSH keys, sudo rules, services
 
 ## Structure
 
 ```
 NixOS-personal/
-├── configuration.nix
-├── customization/
+├── configuration.nix              # Shared base: locale, nix settings, aliases, overlays
+├── flake.nix                      # Flake inputs (nixos-25.11 + unstable) and mkSystem helper
 ├── flake.lock
-├── flake.nix
-├── machines
-│   ├── Fondue
-│   │   ├── default.nix
+├── customization/                 # Wallpapers and theme assets
+├── machines/
+│   ├── Fondue/
+│   │   ├── default.nix            # chill role, sof-firmware
 │   │   └── Fondue-hardware-configuration.nix
-│   ├── NixMac
-│   │   ├── default.nix
+│   ├── NixMac/
+│   │   ├── default.nix            # chill role, battery mgmt, mac keyboard layout
 │   │   └── NixMac-hardware-configuration.nix
-│   ├── Raclette
-│   │   ├── default.nix
+│   ├── Raclette/
+│   │   ├── default.nix            # dev role, Nvidia GPU, GRUB
 │   │   └── Raclette-hardware-configuration.nix
-│   └── Tartiflette
-│       ├── default.nix
+│   └── Tartiflette/
+│       ├── default.nix            # dev role, laptop, battery mgmt, sof-firmware
 │       └── Tartiflette-hardware-configuration.nix
-├── modules
-│   ├── battery-management.nix
-│   ├── cosmic.nix
+├── modules/
+│   ├── battery-management.nix     # Power/charging thresholds (laptops only)
+│   ├── cosmic.nix                 # Cosmic DE
 │   ├── fonts.nix
-│   ├── gnome.nix
-│   ├── programs.nix
-│   ├── services.nix
-│   ├── solaar.nix
-│   └── users.nix
-├── README.md
-└── roles
-    ├── chill.nix   # Gnome — lightweight/casual machines
-    └── dev.nix     # Cosmic — daily driver workstations
+│   ├── gnome.nix                  # Gnome DE
+│   ├── programs.nix               # git, vim, zsh (oh-my-zsh)
+│   ├── services.nix               # tailscale, openssh, pipewire, sunshine, printing, fprintd
+│   ├── solaar.nix                 # Logitech device manager
+│   └── users.nix                  # fkozmik user, packages, SSH authorized keys
+└── roles/
+    ├── chill.nix                  # Gnome + programs + services + users
+    └── dev.nix                    # Cosmic + fonts + programs + services + solaar + users
 ```
 
 ## Machines
@@ -53,17 +50,24 @@ NixOS-personal/
 | Machine | Role | Notes |
 |---|---|---|
 | Raclette | `dev` | Desktop, Nvidia GPU |
-| Tartiflette | `dev` | Laptop |
+| Tartiflette | `dev` | Laptop, battery management |
 | Fondue | `chill` | Secondary machine |
-| NixMac | `chill` | MacBook (Mac keyboard layout) |
+| NixMac | `chill` | MacBook, mac keyboard layout, battery management |
 
-## Tooling and applications I use
+## Roles
 
-Most relevant user apps daily drivers:
+| Role | DE | Extra modules |
+|---|---|---|
+| `dev` | Cosmic | fonts, solaar |
+| `chill` | Gnome | — |
 
-- Cosmic Desktop Environment (dev role) / Gnome (chill role)
-- vim
-- zsh (oh-my-zsh)
-- tailscale
-- docker
-- and NixOS (Special thanks to you !)
+## Key packages and services
+
+- **Shell**: zsh + oh-my-zsh (`jonathan` theme)
+- **Editor**: vim (default)
+- **VCS**: git (with opinionated defaults: rerere, autoStash, updateRefs…)
+- **Networking**: tailscale, openssh (key-only)
+- **Audio**: pipewire + PulseAudio compat
+- **Remote**: sunshine (game streaming), moonlight-qt, remmina, RealVNC
+- **Dev tools**: docker, gh, PhpStorm (from unstable channel), php, claude-code
+- **Desktop apps**: Firefox, Chrome, Bitwarden, Discord, Spotify, LibreOffice, Logseq, rnote, xournalpp
