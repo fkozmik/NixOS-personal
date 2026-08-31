@@ -8,10 +8,10 @@
     let
       unstableOverlay = final: prev: {
         jetbrains = prev.jetbrains // {
-          phpstorm = (import nixpkgs-unstable {
+          idea = (import nixpkgs-unstable {
             system = final.system;
             config.allowUnfree = true;
-          }).jetbrains.phpstorm;
+          }).jetbrains.idea;
         };
       };
 

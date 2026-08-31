@@ -7,7 +7,7 @@ NixOS config files. KISS principle.
 **Highlights**:
 
 - Multiple machines, **two roles**: `dev` (Cosmic DE) and `chill` (Gnome)
-- Single flake entry point with an **unstable overlay** for select packages (PhpStorm)
+- Single flake entry point with an **unstable overlay** for select packages (idea)
 - Fully **declarative** configuration — locale, GC, SSH keys, sudo rules, services
 
 ## Structure
@@ -15,7 +15,7 @@ NixOS config files. KISS principle.
 ```
 NixOS-personal/
 ├── configuration.nix              # Shared base: locale, nix settings, aliases, overlays
-├── flake.nix                      # Flake inputs (nixos-25.11 + unstable) and mkSystem helper
+├── flake.nix                      # Flake inputs (nixos-26.05 + unstable) and mkSystem helper
 ├── flake.lock
 ├── customization/                 # Wallpapers and theme assets
 ├── machines/
@@ -69,5 +69,5 @@ NixOS-personal/
 - **Networking**: tailscale, openssh (key-only)
 - **Audio**: pipewire + PulseAudio compat
 - **Remote**: sunshine (game streaming), moonlight-qt, remmina, RealVNC
-- **Dev tools**: docker, gh, PhpStorm (from unstable channel), php, claude-code
+- **Dev tools**: docker, gh, idea (from unstable channel), php
 - **Desktop apps**: Firefox, Chrome, Bitwarden, Discord, Spotify, LibreOffice, Logseq, rnote, xournalpp

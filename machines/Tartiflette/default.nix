@@ -8,16 +8,19 @@
       ../../modules/battery-management.nix
     ];
 
-  boot.loader = {
-    systemd-boot.enable = false;
-    grub = {
-      enable = true;
-      device = "nodev";
-      efiSupport = true;
-      useOSProber = true;
-    };
-    efi.canTouchEfiVariables = true;
-  };
+  boot = {
+        loader = {
+            systemd-boot.enable = false;
+            grub = {
+              enable = true;
+              device = "nodev";
+              efiSupport = true;
+              useOSProber = true;
+            };
+            efi.canTouchEfiVariables = true;
+        };
+        initrd.kernelModules = [ "i8042" "atkbd" "hid_generic" "usbhid" ];
+      };
 
   hardware = {
     enableAllFirmware = true;
