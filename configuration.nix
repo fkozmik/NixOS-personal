@@ -27,7 +27,7 @@
   };
 
   nix = {
-    package = pkgs.nixVersions.nix_2_32;
+    package = pkgs.nixVersions.nix_2_34;
     settings = {
       auto-optimise-store = true;
       experimental-features = [ "nix-command" "flakes" ];
@@ -44,7 +44,7 @@
     allowUnfreePredicate = (pkg: true);
     permittedInsecurePackages = [
       "broadcom-sta-6.30.223.271-57-6.12.44"
-      "electron-27.3.11"
+      "electron-39.8.10"
     ];
   };
 

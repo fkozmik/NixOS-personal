@@ -27,7 +27,6 @@
     packages = with pkgs; [
       baobab
       bitwarden-desktop
-      claude-code
       discord
       docker
       fastfetch
@@ -45,7 +44,7 @@
       oh-my-zsh
       php
       powerline-fonts
-      realvnc-vnc-viewer
+      prismlauncher
       remmina
       rnote
       solaar
