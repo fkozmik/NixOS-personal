@@ -55,7 +55,8 @@
       vim
       xournalpp
 
+      jetbrains.idea
       jetbrains.phpstorm
-    ]; 
+    ];
   };
 }

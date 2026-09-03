@@ -2,22 +2,27 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager }:
     let
       unstableOverlay = final: prev: {
         jetbrains = prev.jetbrains // {
-          phpstorm = (import nixpkgs-unstable {
+          idea = (import nixpkgs-unstable {
             system = final.system;
             config.allowUnfree = true;
-          }).jetbrains.phpstorm;
+          }).jetbrains.idea;
         };
       };
 
       mkSystem = { system, modules }:
         nixpkgs.lib.nixosSystem {
-          inherit system modules;
+          inherit system;
+          modules = modules ++ [ home-manager.nixosModules.home-manager ];
           specialArgs = { inherit unstableOverlay; };
         };
     in {

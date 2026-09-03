@@ -15,7 +15,7 @@ NixOS config files. KISS principle.
 ```
 NixOS-personal/
 ├── configuration.nix              # Shared base: locale, nix settings, aliases, overlays
-├── flake.nix                      # Flake inputs (nixos-25.11 + unstable) and mkSystem helper
+├── flake.nix                      # Flake inputs (nixos-26.05 + unstable) and mkSystem helper
 ├── flake.lock
 ├── customization/                 # Wallpapers and theme assets
 ├── machines/

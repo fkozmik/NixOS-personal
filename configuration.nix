@@ -4,12 +4,12 @@
 
   nixpkgs.overlays = [ unstableOverlay ];
 
-  environment.interactiveShellInit = ''
-    alias gs='git status'
-    alias gd='git diff'
-    alias gl='git log --oneline'
-    alias gogit="cd ~/Documents/git/ && ls"
-  '';
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    backupFileExtension = "bak";
+    users.fkozmik = import ./home;
+  };
 
   i18n = {
     defaultLocale = "fr_FR.UTF-8";
@@ -56,5 +56,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; ## Current 25.11
+  system.stateVersion = "23.11"; ## Current 26.05
 }
